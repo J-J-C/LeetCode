@@ -1,8 +1,8 @@
-package q001.to.q100;
+package q001_to_q100;
 
 import java.util.Arrays;
 
-public class Num_66_Plus_One {
+public class Num_66_PlusOne {
     public static void main(String[] args) {
 
         int[] array = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
@@ -31,34 +31,32 @@ public class Num_66_Plus_One {
     }
 
     public static int[] plusOneOptimal(int[] digits) {
-        public int[] plusOne(int[] digits) {
-            // Add numbers and check for carry
-            // If carry over at the end, create new array and add another digit
-            int[] ret;
-            int carryOver = 1;
+        // Add numbers and check for carry
+        // If carry over at the end, create new array and add another digit
+        int[] ret;
+        int carryOver = 1;
 
-            for(int i=digits.length-1; i >=0 ; i--){
-                digits[i] = digits[i] + carryOver;
+        for (int i = digits.length - 1; i >= 0; i--) {
+            digits[i] = digits[i] + carryOver;
 
-                if(digits[i] >= 10){
-                    digits[i] = digits[i] % 10;
-                    carryOver = 1;
-                }else{
-                    carryOver = 0;
-                }
+            if (digits[i] >= 10) {
+                digits[i] = digits[i] % 10;
+                carryOver = 1;
+            } else {
+                carryOver = 0;
             }
-
-            if(carryOver == 1){
-                ret = new int[digits.length+1];
-                ret[0] = carryOver;
-                for(int i = 0 ; i<digits.length ; i++){
-                    ret[i+1] = digits[i];
-                }
-
-                return ret;
-            }
-
-            return digits;
         }
+
+        if (carryOver == 1) {
+            ret = new int[digits.length + 1];
+            ret[0] = carryOver;
+            for (int i = 0; i < digits.length; i++) {
+                ret[i + 1] = digits[i];
+            }
+
+            return ret;
+        }
+
+        return digits;
     }
 }
