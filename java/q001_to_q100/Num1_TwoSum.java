@@ -3,7 +3,7 @@ package q001_to_q100;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Num_1_TwoSum {
+public class Num1_TwoSum {
 
   public int[] twoSum(int[] nums, int target) {
     int[] array = new int[2];

@@ -2,7 +2,7 @@ package q601_to_q700;
 
 import utils.TreeNode;
 
-public class Num_687LongestUnivaluePath {
+public class Num687_LongestUnivaluePath {
 
   int ans = 0;
 

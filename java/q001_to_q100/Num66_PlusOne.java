@@ -2,7 +2,7 @@ package q001_to_q100;
 
 import java.util.Arrays;
 
-public class Num_66_PlusOne {
+public class Num66_PlusOne {
 
   public static void main(String[] args) {
 
