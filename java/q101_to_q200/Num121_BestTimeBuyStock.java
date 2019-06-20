@@ -1,6 +1,6 @@
 package q101_to_q200;
 
-public class Num_121_BestTimeBuyStock {
+public class Num121_BestTimeBuyStock {
 
 
   public int maxProfit(int[] prices) {

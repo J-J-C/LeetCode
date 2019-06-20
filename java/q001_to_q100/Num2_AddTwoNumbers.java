@@ -2,7 +2,7 @@ package q001_to_q100;
 
 import utils.ListNode;
 
-public class Num_2_AddTwoNumbers {
+public class Num2_AddTwoNumbers {
 
   public void main(String[] args) {
 
