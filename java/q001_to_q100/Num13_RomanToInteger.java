@@ -1,6 +1,6 @@
 package q001_to_q100;
 
-public class Num_13_RomanToInteger {
+public class Num13_RomanToInteger {
   public static void main(String[] args) {
     System.out.println(romanToInt("III"));
     System.out.println(romanToInt("IV"));
