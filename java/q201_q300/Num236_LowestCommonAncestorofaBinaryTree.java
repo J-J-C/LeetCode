@@ -2,7 +2,7 @@ package q201_q300;
 
 import utils.TreeNode;
 
-public class Num_236_LowestCommonAncestorofaBinaryTree {
+public class Num236_LowestCommonAncestorofaBinaryTree {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 
         if (root == null) {
