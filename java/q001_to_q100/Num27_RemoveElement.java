@@ -21,7 +21,7 @@ public class Num27_RemoveElement {
                 while (nums[index] == val && (index != i)) {
                     index--;
                     total--;
-                    if(total == 0) {
+                    if (total == 0) {
                         return 0;
                     }
                 }

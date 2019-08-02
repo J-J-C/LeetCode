@@ -6,7 +6,7 @@ public class Num110_BalancedBinaryTree {
 
 
     public boolean isBalanced(TreeNode root) {
-        if(root == null) {
+        if (root == null) {
             return true;
         }
         int leftHeight = getTreeHeight(root.left);
@@ -16,15 +16,14 @@ public class Num110_BalancedBinaryTree {
     }
 
 
-
     public int getTreeHeight(TreeNode root) {
-        if(root == null) {
-            return  0;
+        if (root == null) {
+            return 0;
         }
-        if(root.left == null && root.right == null) {
+        if (root.left == null && root.right == null) {
             return 1;
         }
-        return Math.max(1 + getTreeHeight(root.left), 1 +getTreeHeight(root.right));
+        return Math.max(1 + getTreeHeight(root.left), 1 + getTreeHeight(root.right));
 
     }
 

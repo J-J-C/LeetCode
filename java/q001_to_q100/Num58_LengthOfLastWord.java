@@ -9,14 +9,15 @@ public class Num58_LengthOfLastWord {
         System.out.println(lengthOfLastWord(s));
 
     }
+
     public static int lengthOfLastWord(String s) {
         String[] array = s.split(" ");
         System.out.println(Arrays.toString(array));
         System.out.println(array.length);
-        if(array.length == 0) {
+        if (array.length == 0) {
             return 0;
         }
-        if(array.length == 1) {
+        if (array.length == 1) {
             return s.length();
         }
         return array[array.length - 1].length();
