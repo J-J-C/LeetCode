@@ -84,17 +84,17 @@ public class Num3_LongestSubstringWithoutRepeatingChars {
         int res = 0;
         int[] lastIndex = new int[128];
         Arrays.fill(lastIndex, -1);
-        int i = 0, j = 0;
+        int i = 0, startIndex = 0;
         for(; i < s.length(); i++){
             char c = s.charAt(i);
             // the last occurrence needs to be grater than
             // current starting index j
-            if(lastIndex[c] >= j){
-                res = Math.max(res, i - j);
-                j = lastIndex[c] + 1;
+            if(lastIndex[c] >= startIndex){
+                res = Math.max(res, i - startIndex);
+                startIndex = lastIndex[c] + 1;
             }
             lastIndex[c] = i;
         }
-        return Math.max(res, i - j);
+        return Math.max(res, i - startIndex);
     }
 }
