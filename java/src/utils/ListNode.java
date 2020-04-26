@@ -7,6 +7,7 @@ public class ListNode {
     public ListNode() {
 
     }
+
     public ListNode(int val) {
         this.val = val;
     }
@@ -23,5 +24,19 @@ public class ListNode {
             pointer = pointer.next;
         }
         System.out.println(builer.toString());
+    }
+
+
+    public static ListNode constructList(int[] array) {
+        if (array.length == 0) {
+            return null;
+        }
+        ListNode head = new ListNode(array[0]);
+        ListNode ptr = head;
+        for (int i = 1; i < array.length; i++) {
+            ptr.next = new ListNode(array[i]);
+            ptr = ptr.next;
+        }
+        return head;
     }
 }
