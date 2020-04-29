@@ -57,8 +57,42 @@ public class Num200_NumberOfIslands {
         return result;
     }
 
-    public static int numIslands(char[][] grid) {
-        return 0;
+    public int numIslands(char[][] grid) {
+        // 11110
+        // 11010
+        // 11000
+        // 00000
+        int count = 0;
+        //BFS
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if (grid[i][j] == '1') {
+                    removeLand(grid, i, j);
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    public void removeLand(char[][] grid, int i, int j) {
+        if (
+                i < 0 ||  // row inbound
+                        i > grid.length - 1 ||
+                        j < 0 || //col inbound
+                        j > grid[0].length - 1 ||
+                        grid[i][j] == '0'
+        ) return;
+
+        // let us remove this land first:
+        grid[i][j] = '0';
+
+        // let us iterate the adjacent node horizontally and vertically
+        removeLand(grid, i - 1, j); // adjacent top
+        removeLand(grid, i + 1, j); // adjacent bottom
+        removeLand(grid, i, j - 1); // adjacent left
+        removeLand(grid, i, j + 1); // adjacent right
+
     }
 
 }
