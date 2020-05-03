@@ -1,4 +1,4 @@
-package src.string;
+package string;
 
 public class Num1108_DefangingAnIPAddress {
     public String defangIPaddr(String address) {

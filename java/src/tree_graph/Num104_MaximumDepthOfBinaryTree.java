@@ -1,6 +1,6 @@
-package src.tree_graph;
+package tree_graph;
 
-import src.utils.TreeNode;
+import utils.TreeNode;
 
 public class Num104_MaximumDepthOfBinaryTree {
 

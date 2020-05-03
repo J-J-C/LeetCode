@@ -1,4 +1,4 @@
-package src.string;
+package string;
 
 public class Num242_ValidAnagram {
     public boolean isAnagram(String s, String t) {
