@@ -92,7 +92,5 @@ public class Num200_NumberOfIslands {
         removeLand(grid, i + 1, j); // adjacent bottom
         removeLand(grid, i, j - 1); // adjacent left
         removeLand(grid, i, j + 1); // adjacent right
-
     }
-
 }

@@ -3,7 +3,6 @@ package list;
 import utils.ListNode;
 
 public class Num206_ReverseLinkedList {
-    ListNode newHead = null;
 
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;
@@ -41,6 +40,8 @@ public class Num206_ReverseLinkedList {
 
         return newHead;
     }
+
+    ListNode newHead = null;
 
     public ListNode reverseList3(ListNode head) {
         helper(head);
