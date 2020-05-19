@@ -1,4 +1,4 @@
-package greedy_dp;
+package dynamic_programming;
 
 public class Num70_ClimbingStairs {
 
