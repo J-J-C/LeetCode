@@ -19,9 +19,8 @@ public class Num5_LongestPalindromicSubstring {
 
         for (int i = s.length() - 1; i >= 0; i--) {
             for (int j = i; j < s.length(); j++) {
-                memory[i][j] = (s.charAt(i) == s.charAt(j))
-                        && (j - i < 3 || memory[i + 1][j - 1]);
-
+                memory[i][j] = (s.charAt(i) == s.charAt(j)) && (j - i < 3 || memory[i + 1][j - 1]);
+                // update the global result
                 if (memory[i][j] && (j - i + 1 > maxLength)) {
                     palindromeStartsAt = i;
                     maxLength = j - i + 1;
