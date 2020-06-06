@@ -1,11 +1,6 @@
-package dfs_bfs;
+package tree_graph_dfs_bfs;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 public class Num127_WordLadder {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {

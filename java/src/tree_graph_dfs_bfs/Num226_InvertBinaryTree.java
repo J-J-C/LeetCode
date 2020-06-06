@@ -1,4 +1,4 @@
-package tree_graph;
+package tree_graph_dfs_bfs;
 
 
 import utils.TreeNode;

@@ -1,4 +1,4 @@
-package dfs_bfs;
+package tree_graph_dfs_bfs;
 
 import java.util.LinkedList;
 import java.util.Queue;
