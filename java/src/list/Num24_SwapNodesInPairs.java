@@ -8,14 +8,12 @@ public class Num24_SwapNodesInPairs {
             return head;
         }
         ListNode newHead = head.next;
-
         ListNode pointer = head;
         ListNode previous = null;
         ListNode next = pointer.next;
 
 
         while (next != null) {
-
             ListNode nextStage = next.next;
             ListNode temp = next;
 
