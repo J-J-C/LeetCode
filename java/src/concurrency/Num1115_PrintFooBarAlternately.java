@@ -4,35 +4,35 @@ import java.util.concurrent.Semaphore;
 
 public class Num1115_PrintFooBarAlternately {
 
-    private int n;
-    private Semaphore foo = new Semaphore(1);
-    private Semaphore bar = new Semaphore(0);
+  private int n;
+  private Semaphore foo = new Semaphore(1);
+  private Semaphore bar = new Semaphore(0);
 
 
-    public Num1115_PrintFooBarAlternately(int n) {
-        this.n = n;
+  public Num1115_PrintFooBarAlternately(int n) {
+    this.n = n;
+  }
+
+  public void foo(Runnable printFoo) throws InterruptedException {
+
+    for (int i = 0; i < n; i++) {
+
+      // printFoo.run() outputs "foo". Do not change or remove this line.
+      foo.acquire();
+      printFoo.run();
+      bar.release();
     }
+  }
 
-    public void foo(Runnable printFoo) throws InterruptedException {
+  public void bar(Runnable printBar) throws InterruptedException {
 
-        for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
 
-            // printFoo.run() outputs "foo". Do not change or remove this line.
-            foo.acquire();
-            printFoo.run();
-            bar.release();
-        }
+      // printBar.run() outputs "bar". Do not change or remove this line.
+      bar.acquire();
+      printBar.run();
+      foo.release();
     }
-
-    public void bar(Runnable printBar) throws InterruptedException {
-
-        for (int i = 0; i < n; i++) {
-
-            // printBar.run() outputs "bar". Do not change or remove this line.
-            bar.acquire();
-            printBar.run();
-            foo.release();
-        }
-    }
+  }
 
 }
