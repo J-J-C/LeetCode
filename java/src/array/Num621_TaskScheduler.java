@@ -37,11 +37,17 @@ public class Num621_TaskScheduler {
     if (n == 0) {
       return tasks.length;
     }
-    // setup
+    // key: task value: frequency remaining
     Map<Character, Integer> map = new HashMap<>();
-    PriorityQueue<Character> priorityQueue = new PriorityQueue<>(
+
+    // list of task, order by frequency
+    PriorityQueue<Character> remainingTaskPq = new PriorityQueue<>(
         (o1, o2) -> map.get(o2) - map.get(o1));
-    Queue<Character> queue = new LinkedList<>();
+
+    // to store tasks that cannot be processed
+    Queue<Character> waitingQueue = new LinkedList<>();
+
+    // setup
     for (char c : tasks) {
       if (map.containsKey(c)) {
         map.put(c, map.get(c) + 1);
@@ -50,31 +56,38 @@ public class Num621_TaskScheduler {
       }
     }
     for (char c : map.keySet()) {
-      priorityQueue.add(c);
+      remainingTaskPq.add(c);
     }
 
     int interval = 0;
-
     while (!map.keySet().isEmpty()) {
       if (interval < n) {
-        if (!priorityQueue.isEmpty()) {
-          proceedTask(priorityQueue, queue, map, result);
+        // if there is no interval, and there are task remaining
+        if (!remainingTaskPq.isEmpty()) {
+          // process a task and add it to waiting waitingQueue
+          proceedTask(remainingTaskPq, waitingQueue, map, result);
         } else {
           result.add('+');
         }
+        // every time a task is processed, increment interval
         interval++;
       } else if (interval == n) {
+        // when interval is reached, we can clear the waitingQueue and process any tasks.
         interval = 0;
-        if (priorityQueue.isEmpty()) {
+
+        // if no task can be processed, add +
+        if (remainingTaskPq.isEmpty()) {
           result.add('+');
         } else {
-          proceedTask(priorityQueue, queue, map, result);
-          if (!queue.isEmpty()) {
-            priorityQueue.add(queue.poll());
+          // process remaining task
+          proceedTask(remainingTaskPq, waitingQueue, map, result);
+          if (!waitingQueue.isEmpty()) {
+            remainingTaskPq.add(waitingQueue.poll());
           }
         }
-        while (!queue.isEmpty()) {
-          priorityQueue.add(queue.poll());
+        // move everything back to remaining task list.
+        while (!waitingQueue.isEmpty()) {
+          remainingTaskPq.add(waitingQueue.poll());
         }
       }
     }
