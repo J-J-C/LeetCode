@@ -7,6 +7,7 @@ public class ListNode {
     public ListNode() {
 
     }
+
     public ListNode(int val) {
         this.val = val;
     }
