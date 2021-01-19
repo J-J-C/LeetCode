@@ -1,4 +1,4 @@
-package dp;
+package dp_greedy;
 
 public class Num276_PaintFence {
 

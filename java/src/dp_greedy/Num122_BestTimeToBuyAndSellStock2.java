@@ -1,4 +1,4 @@
-package dp;
+package dp_greedy;
 
 public class Num122_BestTimeToBuyAndSellStock2 {
   public int maxProfit(int[] prices) {

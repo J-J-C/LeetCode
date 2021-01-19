@@ -1,4 +1,4 @@
-package dp;
+package dp_greedy;
 
 import java.util.ArrayList;
 import java.util.HashMap;
