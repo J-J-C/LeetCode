@@ -1,4 +1,4 @@
-package medium;
+package series.meetingroom;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
