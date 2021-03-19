@@ -1,4 +1,4 @@
-package easy;
+package series.stock;
 
 public class Num121_BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {

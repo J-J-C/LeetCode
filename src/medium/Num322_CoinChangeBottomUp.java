@@ -13,7 +13,7 @@ public class Num322_CoinChangeBottomUp {
       return 0;
     }
     int[] memory = new int[amount + 1];
-
+    memory[0] = 0;
 
     return memory[amount];
   }
