@@ -1,4 +1,4 @@
-package easy;
+package series.shortestworddistance;
 
 import java.util.ArrayList;
 import java.util.HashMap;
