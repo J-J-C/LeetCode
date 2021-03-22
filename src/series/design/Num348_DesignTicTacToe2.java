@@ -1,4 +1,4 @@
-package medium;
+package series.design;
 
 public class Num348_DesignTicTacToe2 {
 }

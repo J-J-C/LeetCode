@@ -1,4 +1,4 @@
-package easy;
+package series.design;
 
 public class Num604_DesignCompressedStringIterator {
 }
