@@ -1,4 +1,4 @@
-package medium;
+package series.design;
 
 import java.util.HashMap;
 import java.util.Map;
